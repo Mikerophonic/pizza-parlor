@@ -28,5 +28,4 @@ function Pizza(size, toppings) {
     price += (this.toppings.length * 2)
     this.price = price;
     return price;
-      
  }

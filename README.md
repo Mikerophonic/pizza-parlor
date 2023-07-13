@@ -16,9 +16,15 @@ Describe: Pizza.prototype.calculatePrice()
 Test: "It should calculate the price based on the size property."
 Code:   const myPizza = new Pizza("large", []);
         myPizza.calculatePrice()
-Expected output: 16
+Expected output: 19
 
 Test: "It should calculate the price based on the size and toppings properties."
 Code:   const myPizza = new Pizza("large", ["jalapeno", "pineapple"]);
         myPizza.calculatePrice()
-Expected output: 20
+Expected output: 23
+
+Test: "It should create a new property for the Pizza called price."
+Code:   const myPizza = new Pizza("large", ["jalapeno", "pineapple"]);
+        myPizza.calculatePrice();
+        myPizza.price;
+Expected output: 23
