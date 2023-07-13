@@ -3,10 +3,6 @@ function Pizza(size, toppings) {
     this.toppings = toppings;
  }
 
- Pizza.prototype.addTopping = function(topping) {
-    this.toppings.push(topping);
- }
-
  Pizza.prototype.calculatePrice = function() {
     let price = 0
     switch (this.size) {
@@ -30,6 +26,7 @@ function Pizza(size, toppings) {
           break;
       }
     price += (this.toppings.length * 2)
+    this.price = price;
     return price;
       
  }
