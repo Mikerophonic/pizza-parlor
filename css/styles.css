@@ -1,0 +1,22 @@
+body {
+    display: ;
+}
+
+#wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin: 20px;
+    padding: 20px;
+}
+
+#choose-size {
+margin-bottom: 30px;
+}
+
+h1 {
+justify-content: center;
+}
+
+
+
