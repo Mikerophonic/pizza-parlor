@@ -7,26 +7,30 @@ function Pizza(size, toppings) {
     let price = 0
     switch (this.size) {
         case "petite":
-          price += 20;
+          price = 20;
           break;
         case "medio":
-          price += 30;
+          price = 35;
           break;
         case "grande":
-          price += 40
+          price = 50
           break;
       }
-    price += (this.toppings.length * 5)
-    this.price = price;
-    return price;
+      console.log(this.toppings.length)
+      const toppingsPrice = this.toppings.length * 5;
+      console.log(toppingsPrice)
+
+      price += toppingsPrice;    
+      this.price = price;
  }
 
 
  // User Interface logic ----- 
 
 function displayOrderDetails(pizza) {
+    const toppingsListAsString = pizza.toppings.join(", ");
     document.getElementById("size-span").innerText = pizza.size;
-    document.getElementById("toppings-span").innerText = pizza.toppings;
+    document.getElementById("toppings-span").innerText =toppingsListAsString;
     document.getElementById("price-span").innerText = "$" + pizza.price;
 }
 
@@ -37,8 +41,7 @@ function handleFormSubmission(event) {
     toppingSelections.forEach(function(topping){
         toppingsList.push(topping.value)
     });
-    const toppingsListAsString = toppingsList.join(", ");
-    let newPizza = new Pizza(sizeSelection, toppingsListAsString);
+    let newPizza = new Pizza(sizeSelection, toppingsList);
     newPizza.calculatePrice();
     displayOrderDetails(newPizza);
      document.querySelector("input[name='size']:checked").checked = false;

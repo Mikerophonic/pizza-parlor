@@ -31,7 +31,7 @@ h1 {
  
 #order-details {
     flex: 1;
-    background-color: bisque;
+    background-color: antiquewhite;
     color: black;
     border-radius: 10px;
     padding: 20px;
@@ -59,7 +59,7 @@ form {
 }
 
 #submitBtn {
-    font-size: 34px;
+    font-size: 30px;
 }
 span {
     font-size: larger;
