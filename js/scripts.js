@@ -28,7 +28,7 @@ function displayOrderDetails(pizza) {
     const toppingsListAsString = pizza.toppings.join(", ");
     document.getElementById("size-span").innerText = pizza.size;
     document.getElementById("toppings-span").innerText = toppingsListAsString;
-    document.getElementById("price-span").innerText = "$" + pizza.price;
+    document.getElementById("price-span").innerText = "$" + pizza.price + ".00";
 }
 
 function handleFormSubmission(event) {
