@@ -1,34 +1,112 @@
 body {
-    background-image: linear-gradient(tomato,  rgb(255, 148, 71));
-    color:white;
+    background-color: #292929;
+    color: antiquewhite;
+    margin: 25px;
+    font-family: Arial, sans-serif;
 }
 
 #wrapper {
     display: flex;
-    flex-direction: row;
     justify-content: center;
     margin: 20px;
     padding: 20px;
 }
 
 #choose-size {
-margin-bottom: 30px;
+    margin-bottom: 30px;
 }
 
 h1 {
-
+    color: white;
+    font-family: 'Lugrasimo', cursive;
+    font-size: 48px;
+    text-align: center;
+    margin-top: 0;
+    margin-bottom: 20px;
 }
 
+#tagline {
+    font-size: 18px;
+}
+ 
 #order-details {
-    flex-grow: 2;
+    flex: 1;
+    background-color: bisque;
+    color: black;
+    border-radius: 10px;
+    padding: 20px;
+    margin-right: 20px;
+    max-height: 400px; 
+    overflow-y: auto;
+}
+
+header {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
 }
 
 form {
-    flex-grow: 2;
+    flex: 1;
+    border-right: white dotted 3px;
+    margin-right: 30px;
 }
 
 #submit-order {
-    flex-grow:1;
+    flex: 1;
+    text-align: center;
+    margin-top: 20px;
 }
+
+#submitBtn {
+    font-size: 34px;
+}
+span {
+    font-size: larger;
+}
+
+input[type="radio"],
+input[type="checkbox"] {
+    margin-right: 5px;
+}
+
+input[type="submit"],
+button {
+    padding: 10px 20px;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+#deleteBtn {
+    background-color: #ff3822;
+}
+
+#deleteBtn:hover {
+    background-color: #d32f1d;
+}
+
+#addToOrderBtn {
+    background-color: rgb(0, 164, 0);
+}
+#addToOrderBtn:hover {
+    background-color: green;
+}
+
+#submitBtn {
+    background-color: dodgerblue;
+}
+
+#submitBtn:hover {
+    background-color: rgb(24, 113, 202);
+}
+
+.hidden {
+    display:none;
+}
+
 
 

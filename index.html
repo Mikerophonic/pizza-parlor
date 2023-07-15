@@ -7,11 +7,16 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
     <link rel="stylesheet" href="css/styles.css">
     <script src="js/scripts.js"></script>
-
-</head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lugrasimo&display=swap" rel="stylesheet"> 
+ </head>
 <body>
-<h1>Pizza & Parlor</h1>
-<p><em>Superior flatbread pies since 2024.</em></p>
+<header>
+    <h1>Pizza & Parlor</h1>
+    <p id="tagline"><em>Superior flatbread pies since 2024.</em></p>
+</header>
+
 <div id="wrapper">
     <form>
         <div id="choose-pizza">
@@ -28,47 +33,31 @@
 
                 <legend>Choose your toppings:</legend>
                 <input type="checkbox" id="avocado" name="toppings" value="avocado"><label for="avocado">&nbspavocado</label><br>
-                <input type="checkbox" id="squid-ink" name="toppings" value="squid ink"><label for="squid-ink">&nbspsquid ink</label><br>
                 <input type="checkbox" id="smoked-reindeer" name="toppings" value="smoked reindeer"><label for="smoked-reindeer">&nbspsmoked reindeer</label><br>
                 <input type="checkbox" id="cold-fish" name="toppings" value="cold fish"><label for="cold-fish">&nbspcold fish</label><br>
-                <input type="checkbox" id="fiddlehead-ferns" name="toppings" value="fiddlehead ferns"><label for="fiddlehead-ferns">&nbspfiddlehead ferns</label><br>
+                <input type="checkbox" id="fiddlehead-fern" name="toppings" value="fiddlehead fern"><label for="fiddlehead-fern">&nbspfiddlehead fern</label><br>
                 <input type="checkbox" id="roast-pumpkin" name="toppings" value="roast pumpkin"><label for="roast-pumpkin">&nbsproast pumpkin</label><br>
-                <input type="checkbox" id="fig" name="toppings" value="fig"><label for="fig">&nbspfig</label><br>
                 <input type="checkbox" id="pistachio" name="toppings" value="pistachio"><label for="pistachio">&nbsppistachio</label><br>
-                <input type="checkbox" id="chicory" name="toppings" value="chicory"><label for="chicory">&nbspchicory</label><br>   
-                <input type="checkbox" id="grape" name="toppings" value="grape"><label for="grape">&nbspgrape</label><br>                
+                <input type="checkbox" id="squid-ink" name="toppings" value="squid ink"><label for="squid-ink">&nbspsquid ink</label><br> 
                 <input type="checkbox" id="caramelized-banana" name="toppings" value="caramelized banana"><label for="caramelized-banana">&nbspcaramelized banana</label><br>
-                <input type="checkbox" id="moroccan-lamb" name="toppings" value="Moroccan lamb"><label for="moroccan-lamb">&nbspMoroccan lamb</label><br> 
-                <input type="checkbox" id="wagyu-veal" name="toppings" value="Wagyu veal"><label for="wagyu-veal">&nbspWagyu veal</label><br>
                 <input type="checkbox" id="hot-cheetos" name="toppings" value="hot Cheetos"><label for="hot-cheetos">&nbsphot Cheetos</label><br>
                 <input type="checkbox" id="bean" name="toppings" value="bean"><label for="bean">&nbspbean</label><br>                
-                
-                
-               
-                
-
-            </label><br>
-
-
-
                 </fieldset>
-
             </div>
-
         </div>
         <br>
         <button type='button' id="addToOrderBtn">Add to Order</button>
     </form>
 
     <div id="order-details">
-        <h2>Order Details</h2>
+        <h2>Order Details</h2><br>
         <p>Size: <span id="size-span"></span></p>
         <p>Toppings: <span id="toppings-span"></span></p><br>
-        <p>Price: <span id="price-span"></span></p>
-        <button type='button'>Delete Item</button>
+        <p>Price: <span id="price-span"></span></p><br><br>
+        <button type='button' id="deleteBtn" class="hidden">Delete Item</button>
     </div>
     <div id="submit-order">
-        <button type="button">Submit Order</button>
+        <button type="button" id="submitBtn" class="hidden">Submit Order</button>
     </div>
 </div>
 

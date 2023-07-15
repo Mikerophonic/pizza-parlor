@@ -27,11 +27,10 @@ function Pizza(size, toppings) {
 function displayOrderDetails(pizza) {
     document.getElementById("size-span").innerText = pizza.size;
     document.getElementById("toppings-span").innerText = pizza.toppings;
-    document.getElementById("price-span").innerText = pizza.price;
+    document.getElementById("price-span").innerText = "$" + pizza.price;
 }
 
 function handleFormSubmission(event) {
-    event.preventDefault();
     const sizeSelection = document.querySelector("input[name='size']:checked").value;
     const toppingSelections = document.querySelectorAll("input[name='toppings']:checked")
     const toppingsList = [];
@@ -51,5 +50,10 @@ function handleFormSubmission(event) {
 
 
   window.addEventListener("load", function (){
-    document.getElementById("addToOrderBtn").addEventListener("click", handleFormSubmission);
+    document.getElementById("addToOrderBtn").addEventListener("click", function() {
+        handleFormSubmission();
+        document.getElementById("submitBtn").removeAttribute("class");
+        document.getElementById("deleteBtn").removeAttribute("class");
+
+    });
   });
