@@ -6,7 +6,7 @@ function Pizza(size, toppings) {
  Pizza.prototype.calculatePrice = function() {
     let price = 0
     switch (this.size) {
-        case "piccolo":
+        case "petite":
           price += 20;
           break;
         case "medio":
@@ -24,23 +24,32 @@ function Pizza(size, toppings) {
 
  // User Interface logic ----- 
 
-function displayOrderDetails() {
-
+function displayOrderDetails(pizza) {
+    document.getElementById("size-span").innerText = pizza.size;
+    document.getElementById("toppings-span").innerText = pizza.toppings;
+    document.getElementById("price-span").innerText = pizza.price;
 }
 
 function handleFormSubmission(event) {
     event.preventDefault();
     const sizeSelection = document.querySelector("input[name='size']:checked").value;
-    const toppingSelections = document.querySelector("input#new-phone-number").value;
-    let newContact = new Contact(inputtedFirstName, inputtedLastName, inputtedPhoneNumber);
-    addressBook.addContact(newContact);
-    listContacts(addressBook);
-    document.querySelector("input#new-first-name").value = null;
-    document.querySelector("input#new-last-name").value = null;
-    document.querySelector("input#new-phone-number").value = null;
+    const toppingSelections = document.querySelectorAll("input[name='toppings']:checked")
+    const toppingsList = [];
+    toppingSelections.forEach(function(topping){
+        toppingsList.push(topping.value)
+    });
+    const toppingsListAsString = toppingsList.join(", ");
+    let newPizza = new Pizza(sizeSelection, toppingsListAsString);
+    newPizza.calculatePrice();
+    displayOrderDetails(newPizza);
+     document.querySelector("input[name='size']:checked").checked = false;
+    toppingSelections.forEach(topping => {
+      topping.checked = false;
+    });
   }
   
 
 
   window.addEventListener("load", function (){
-    document.getElementById("addToOrderBtn").addEventListener("submit", handleFormSubmission);
+    document.getElementById("addToOrderBtn").addEventListener("click", handleFormSubmission);
+  });
