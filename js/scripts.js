@@ -6,26 +6,17 @@ function Pizza(size, toppings) {
  Pizza.prototype.calculatePrice = function() {
     let price = 0
     switch (this.size) {
-        case "personal":
-          price += 10;
+        case "piccolo":
+          price += 20;
           break;
-        case "small":
-          price += 13;
+        case "medio":
+          price += 30;
           break;
-        case "medium":
-          price += 16
-          break;
-        case "large":
-          price += 19
-          break;
-        case "X-large":
-          price += 21
-          break;
-        case "jumbo":
-          price += 25
+        case "grande":
+          price += 40
           break;
       }
-    price += (this.toppings.length * 2)
+    price += (this.toppings.length * 5)
     this.price = price;
     return price;
  }
@@ -33,4 +24,23 @@ function Pizza(size, toppings) {
 
  // User Interface logic ----- 
 
- 
+function displayOrderDetails() {
+
+}
+
+function handleFormSubmission(event) {
+    event.preventDefault();
+    const sizeSelection = document.querySelector("input[name='size']:checked").value;
+    const toppingSelections = document.querySelector("input#new-phone-number").value;
+    let newContact = new Contact(inputtedFirstName, inputtedLastName, inputtedPhoneNumber);
+    addressBook.addContact(newContact);
+    listContacts(addressBook);
+    document.querySelector("input#new-first-name").value = null;
+    document.querySelector("input#new-last-name").value = null;
+    document.querySelector("input#new-phone-number").value = null;
+  }
+  
+
+
+  window.addEventListener("load", function (){
+    document.getElementById("addToOrderBtn").addEventListener("submit", handleFormSubmission);
