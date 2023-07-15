@@ -32,19 +32,30 @@ function displayOrderDetails(pizza) {
 }
 
 function handleFormSubmission(event) {
-    const sizeSelection = document.querySelector("input[name='size']:checked").value;
-    const toppingSelections = document.querySelectorAll("input[name='toppings']:checked")
+    const sizeSelection = document.querySelector("input[name='size']:checked");
+    if (!sizeSelection) {
+        alert("Please select a size.");
+        return; 
+    }
+    const size = sizeSelection.value;
+
+    const toppingSelections = document.querySelectorAll("input[name='toppings']:checked");
     const toppingsList = [];
     toppingSelections.forEach(function(topping){
         toppingsList.push(topping.value)
     });
-    let newPizza = new Pizza(sizeSelection, toppingsList);
+
+    let newPizza = new Pizza(size, toppingsList);
     newPizza.calculatePrice();
     displayOrderDetails(newPizza);
-     document.querySelector("input[name='size']:checked").checked = false;
+
+    sizeSelection.checked = false;
     toppingSelections.forEach(topping => {
-      topping.checked = false;
+        topping.checked = false;
     });
+
+    document.getElementById("submitBtn").removeAttribute("class");
+    document.getElementById("deleteBtn").removeAttribute("class");
 }
 
 function deleteItem() {
