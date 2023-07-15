@@ -12,7 +12,7 @@
 
 ## Description
 
-This was created as my fourth independent project for Epicodus, Intermediate Javascript course section: Object-oriented JavaScript. The goal was to create a website for a pizza company where a user can choose one or more individual toppings, a size to order a pizza, and see the final cost.
+This was created as my fourth independent project for Epicodus, Intermediate Javascript course section: Object-Oriented JavaScript. The goal was to create a website for a pizza company where a user can choose one or more individual toppings, a size to order a pizza, and see the final cost.
 
 * Allow the user to choose toppings and size for the pizza they'd like to order.
 * Create a pizza object constructor with properties for toppings and size.
@@ -24,7 +24,7 @@ This was created as my fourth independent project for Epicodus, Intermediate Jav
 * Clone this repository to your local machine: $ git clone https://github.com/Mikerophonic/pizza-parlor.git
 * Open index.html in a web browser.
 
-[Github Pages - Pizza & Parlorr](https://mikerophonic.github.io/pizza-parlor)
+[Github Pages - Pizza & Parlor](https://mikerophonic.github.io/pizza-parlor)
 
 ## Known Bugs
 
