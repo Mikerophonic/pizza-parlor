@@ -2,7 +2,9 @@ body {
     background-color: #292929;
     color: antiquewhite;
     margin: 25px;
-    font-family: Arial, sans-serif;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
 }
 
 #wrapper {
@@ -118,6 +120,16 @@ button {
     -ms-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
 }
+
+footer {
+    display:flex;
+    justify-content: center;    
+    background-color: #292929;
+    color: antiquewhite;
+    padding: 10px;
+    margin-top: auto;
+}
+
 
 
 
