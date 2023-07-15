@@ -16,10 +16,7 @@ function Pizza(size, toppings) {
           price = 50
           break;
       }
-      console.log(this.toppings.length)
       const toppingsPrice = this.toppings.length * 5;
-      console.log(toppingsPrice)
-
       price += toppingsPrice;    
       this.price = price;
  }
@@ -48,17 +45,17 @@ function handleFormSubmission(event) {
     toppingSelections.forEach(topping => {
       topping.checked = false;
     });
-  }
+}
 
-  function deleteItem() {
+function deleteItem() {
     document.getElementById("size-span").innerText = "";
     document.getElementById("toppings-span").innerText = "";
     document.getElementById("price-span").innerText = "";
     document.getElementById("submitBtn").setAttribute("class", "hidden");
     document.getElementById("deleteBtn").setAttribute("class", "hidden");
-  }
+}
   
-  function pressSubmit() {
+function pressSubmit() {
     const wrapper = document.getElementById("wrapper");
     const message = document.createElement("div");
     message.setAttribute("id", "message");
@@ -69,13 +66,12 @@ function handleFormSubmission(event) {
 }
 
 
-  window.addEventListener("load", function (){
-    document.getElementById("addToOrderBtn").addEventListener("click", function() {
-        handleFormSubmission();
-        document.getElementById("submitBtn").removeAttribute("class");
-        document.getElementById("deleteBtn").removeAttribute("class");
-
+window.addEventListener("load", function (){
+document.getElementById("addToOrderBtn").addEventListener("click", function() {
+    handleFormSubmission();
+    document.getElementById("submitBtn").removeAttribute("class");
+    document.getElementById("deleteBtn").removeAttribute("class");
     });
     document.getElementById("deleteBtn").addEventListener("click", deleteItem);
     document.getElementById("submitBtn").addEventListener("click", pressSubmit);
-  });
+});
