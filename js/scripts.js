@@ -26,8 +26,14 @@ function Pizza(size, toppings) {
 
 function displayOrderDetails(pizza) {
     const toppingsListAsString = pizza.toppings.join(", ");
-    document.getElementById("size-span").innerText = pizza.size;
-    document.getElementById("toppings-span").innerText = toppingsListAsString;
+    if (pizza.size === "petite") {
+        document.getElementById("size-span").innerText = pizza.size + " (8\") ~ 20.00";
+    } else if (pizza.size === "medio") {
+        document.getElementById("size-span").innerText = pizza.size + " (10\") ~ 35.00";
+    } else {
+        document.getElementById("size-span").innerText = pizza.size + " (12\") ~ 50.00"
+    }
+    document.getElementById("toppings-span").innerText = toppingsListAsString + " ~ " + (pizza.toppings.length * 5) + ".00 (5 ea.)";
     document.getElementById("price-span").innerText = "$" + pizza.price + ".00";
 }
 
