@@ -43,6 +43,11 @@ h1 {
     border-image: linear-gradient(to right, rgba(234, 190, 137, 0.0), rgb(234, 190, 137), rgba(234, 190, 137, 0.0)) 1;
     padding: 8px;
 }
+
+h1:hover {
+    cursor: pointer;
+}
+
 img {
     max-width: 95px;
     position: absolute;
@@ -96,7 +101,6 @@ input[type="checkbox"] {
     margin-right: 5px;
 }
 
-input[type="submit"],
 button {
     padding: 10px 20px;
     color: #fff;

@@ -91,4 +91,8 @@ document.getElementById("addToOrderBtn").addEventListener("click", function() {
     });
     document.getElementById("deleteBtn").addEventListener("click", deleteItem);
     document.getElementById("submitBtn").addEventListener("click", pressSubmit);
+    document.querySelector("h1").addEventListener("click", function() {
+        window.location.reload();
+    });
+
 });
