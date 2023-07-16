@@ -92,8 +92,13 @@ form {
 #submitBtn {
     font-size: 30px;
 }
+
 span {
     font-size: larger;
+}
+
+#price-span {
+    font-size: 22px;
 }
 
 input[type="radio"],
@@ -133,6 +138,8 @@ button {
 #submitBtn:hover {
     background-color: rgb(24, 113, 202);
 }
+
+
 
 .hidden {
     display:none;
