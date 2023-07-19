@@ -73,13 +73,20 @@ function deleteItem() {
 }
   
 function pressSubmit() {
-    const wrapper = document.getElementById("wrapper");
     const message = document.createElement("div");
+    const alert = document.createElement("img");
+    alert.setAttribute("src", "images/alert-icon-1575.png");
+
     message.setAttribute("id", "message");
     message.innerText = "sry we ran out of everything";
 
+    const alertContainer = document.createElement("div");
+    alertContainer.setAttribute("id", "alert-container");
+    alertContainer.appendChild(alert);
+    alertContainer.appendChild(message);
     wrapper.style.display = "none";
-    wrapper.parentNode.insertBefore(message, wrapper.nextSibling);
+    document.body.appendChild(alertContainer);
+
 }
 
 
